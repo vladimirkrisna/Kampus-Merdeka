@@ -1,0 +1,94 @@
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body{
+        background-color: pink;
+    }
+    table {
+        margin-top: 8%;
+    }
+    thead{
+        background-color: grey;
+    }
+    tbody{
+        text-align: justify;
+        background-color: skyblue;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" align="center" cellpadding="10px" >
+    <thead>
+        <tr>
+            <th>Lokasi</th>
+            <th>Skala</th>
+            <th>Dampak</th>
+        </tr>
+    </thead>
+    <tbody>
+        <script>
+            class Gempa {
+                constructor (lokasi, skala){
+                    this.loc = lokasi;
+                    this.sr = skala;
+                }
+        
+                dampak (kejadian) {
+                    //menentukan dampak
+                    if (this.sr >= 0 && this.sr <= 2) {
+                        kejadian = "Dampaknya tidak terasa";
+                    } else if (this.sr > 2 && this.sr <= 4) {
+                        kejadian = "Dampaknya bangunan retak-retak";
+                    } else if (this.sr > 4 && this.sr <= 6) {
+                        kejadian = "Dampaknya bangunan roboh";
+                    } else if (this.sr > 6) {
+                        kejadian = "Dampaknya bangunan roboh dan berpotensi tsunami";
+                    } else {
+                        alert("Harap masukkan data yang valid");                
+                    }
+                    
+                    //mencetak populasi data
+                    document.write(`<tr>
+                        <td>${this.loc}</td>
+                        <td>${this.sr}</td>
+                        <td>${kejadian}</td>
+                    </tr>`);
+                }
+            }
+            
+            let yamaguchi = new Gempa('Yamaguchi - Jepang', 3.4);
+            let acehjy = new Gempa ('Aceh Jaya - Indonesia', 5.9);
+            let sumbar = new Gempa ('Sumbar - Indonesia', 6.1);
+            let klaten = new Gempa ('Klaten - Indonesia', 2.3);
+            let fukushima = new Gempa ('Fukushima - Jepang', 4);
+            let miyagi = new Gempa('Miyagi - Jepang', 4.2);
+            let nagano = new Gempa ('Nagano - Jepang', 2.1);
+            let valdivia = new Gempa ('Valdivia - Chile', 9.5);
+            let kamchatka = new Gempa ('Kamchatka - Rusia', 9.0);
+            let ekuador = new Gempa ('Pantai Ekuador', 8.8);
+        
+            yamaguchi.dampak();
+            acehjy.dampak();
+            sumbar.dampak();
+            klaten.dampak();
+            fukushima.dampak();
+            miyagi.dampak();
+            nagano.dampak();
+            valdivia.dampak();
+            kamchatka.dampak();
+            ekuador.dampak();
+            
+        </script>
+    </tbody>
+    </table>
+</body>
+</html>
