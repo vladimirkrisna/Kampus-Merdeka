@@ -78,7 +78,7 @@ function pangkat() {
     } else if (isNaN(numb2) || numb2 == '') {
         alert ("Angka 2 Tidak Valid");
     } else {
-        total = numb1 ** numb2;
+        total = Math.pow(numb1,numb2);
         frm.hasil.value = total;
     }
 }
