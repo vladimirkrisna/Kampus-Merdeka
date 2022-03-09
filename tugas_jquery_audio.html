@@ -1,0 +1,72 @@
+<style>
+  body{
+    text-align: center;
+    font-size: 14pt;
+    font-weight: bold;
+  }
+</style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tugas 8 Jquery - Event</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript">
+      $("document").ready(function () {
+        $(".gajah").click(function () {
+          $(this).css({
+            background: "url('images/gajah.png')"
+          });
+          $("<audio></audio>").attr({
+              src: "audio/gajah.mp3",
+              autoplay: "autoplay"
+            });
+        });
+        $(".monyet").click(function () {
+          $(this).css({
+            background: "url('images/monyet.png')"
+          });
+          $("<audio></audio>").attr({
+              src: "audio/monyet.mp3",
+              autoplay: "autoplay"
+            });
+        });
+        $(".sapi").click(function () {
+          $(this).css({
+            background: "url('images/sapi.png')"
+          });
+          $("<audio></audio>").attr({
+              src: "audio/sapi.mp3",
+              autoplay: "autoplay"
+            });
+        });
+        $(".serigala").click(function () {
+          $(this).css({
+            background: "url('images/serigala.png')"
+          });
+          $("<audio></audio>").attr({
+              src: "audio/serigala.mp3",
+              autoplay: "autoplay"
+            });
+        });
+      });
+    </script>
+    <style type="text/css">
+      div {
+        background: greenyellow;
+        width: 250px;
+        height: 200px;
+        float: left;
+        margin: 30px;
+        padding: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Macam - Macam Hewan</p>
+    <div class="gajah">Gajah</div>
+    <div class="monyet">Monyet</div>
+    <div class="sapi">Sapi</div>
+    <div class="serigala">Serigala</div>
+  </body>
+</html>
