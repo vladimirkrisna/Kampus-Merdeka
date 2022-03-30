@@ -19,7 +19,7 @@
 <?php
 function cekLogin($nama, $password){
     if ($nama == 'admin' && $password == 'mimin') header("location: home/home.html");
-    else echo "<script>alert('Username atau Password Salah !!')history.go(-1)</script>";
+    else echo "<script>alert('Username atau Password Salah !!');history.go(-1);</script>";
 }
 if (isset($_POST["sign-in"])) cekLogin($_POST['username'], $_POST['password']);
 ?>
